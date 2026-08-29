@@ -155,7 +155,7 @@ const HardCapsulesImage = () => (
   </svg>
 );
 
-// ─── STEP / PRODUCT CONFIG ────────────────────────────────────────────────────
+// ─── STEP / PRODUCT CONFIG ──────────── ────────────────────────────────────────
 const stepIcons = [FlaskConical, Target, Package, Microscope, Sparkles, Truck];
 
 const stepStyles = [
