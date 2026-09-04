@@ -2,41 +2,40 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import certImg from "../assets/sertificat.png";
 import gmpLogo from "../assets/gmp.jpg";
+import Header from "../components/Header";
 
 export default function GMP() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const title = t("gmp.title");
 
   return (
-    <div style={{ padding: 24 }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
-        <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-          <h2 style={{ margin: 0 }}>{t("gmp.titleUz")}</h2>
-          <h2 style={{ margin: 0 }}>{t("gmp.titleRu")}</h2>
-          <h2 style={{ margin: 0 }}>{t("gmp.titleEn")}</h2>
+   <>
+   <Header/>
+     <div className="max-w-6xl mx-auto p-6">
+      <div className="bg-white rounded-xl  overflow-hidden">
+        <div className="flex items-center gap-4 p-6 border-b border-slate-100">
+          <img src={gmpLogo} alt={t("gmp.logoAlt")} className="h-14 w-14 object-contain" />
+          <div className="flex items-center gap-4">
+            <h1 className="text-2xl md:text-3xl font-semibold text-emerald-600 uppercase">{title}</h1>
+          </div>
         </div>
-        <img
-          src={gmpLogo}
-          alt={t("gmp.logoAlt")}
-          style={{ height: 56, marginLeft: "auto" }}
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
-        />
-      </div>
 
-      <div style={{ display: "flex", gap: 24, alignItems: "flex-start" }}>
-        <img
-          src={certImg}
-          alt={t("gmp.imageAlt")}
-          style={{ width: 320, maxWidth: "40%", objectFit: "contain" }}
-        />
+        <div className="p-6 md:p-8">
+          <div className="flex flex-col md:flex-row items-start md:items-stretch gap-6">
+            <div className="md:w-1/2  flex justify-center">
+              <img src={certImg} alt={t("gmp.imageAlt")} className="w-full object-contain shadow-sm" />
+            </div>
 
-        <div style={{ flex: 1, minWidth: 200 }}>
-          <p style={{ marginTop: 0 }}>{t("gmp.p1")}</p>
-          <p>{t("gmp.p2")}</p>
-          <p>{t("gmp.p3")}</p>
+            <div className="md:w-2/3 text-slate-700  leading-relaxed">
+              <p className="font-semibold mb-3 text-4xl">{t("gmp.p1")}</p>
+              <p className="mb-3 text-2xl font-bold">{t("gmp.p2")}</p>
+              <p className="mb-0 text-2xl font-bold">{t("gmp.p3")}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+   </>
   );
 }
