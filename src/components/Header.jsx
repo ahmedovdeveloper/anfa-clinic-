@@ -173,13 +173,6 @@ export default function Header() {
               </Link>
 
               <Link
-                to="/gmp"
-                className="nav-link px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-all"
-              >
-                {t("header.gmp")}
-              </Link>
-
-              <Link
                 to="/kso"
                 className="nav-link px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-all"
               >
@@ -198,6 +191,12 @@ export default function Header() {
                 className="nav-link px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-all"
               >
                 {t("header.career")}
+              </Link>
+               <Link
+                to="/gmp"
+                className="nav-link px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-all"
+              >
+                GMP
               </Link>
 
               <Link
@@ -294,6 +293,14 @@ export default function Header() {
                   {t("header.about")}
                 </Link>
 
+               <Link
+                  to="/gmp"
+                  className="mobile-menu-item block px-4 py-4 bg-slate-50 hover:bg-blue-50 rounded-xl transition-all font-medium text-slate-700 hover:text-blue-600 border border-transparent hover:border-blue-200"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  GMP
+                </Link>
+
                 <Link
                   to="/products"
                   className="mobile-menu-item block px-4 py-4 bg-slate-50 hover:bg-blue-50 rounded-xl transition-all font-medium text-slate-700 hover:text-blue-600 border border-transparent hover:border-blue-200"
@@ -308,14 +315,6 @@ export default function Header() {
                   onClick={() => setMobileOpen(false)}
                 >
                   {t("header.partners")}
-                </Link>
-
-                <Link
-                  to="/gmp"
-                  className="mobile-menu-item block px-4 py-4 bg-slate-50 hover:bg-blue-50 rounded-xl transition-all font-medium text-slate-700 hover:text-blue-600 border border-transparent hover:border-blue-200"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {t("header.gmp")}
                 </Link>
 
                 <Link
