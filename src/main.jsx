@@ -13,6 +13,7 @@ import NewsView from "./components/NewsView";
 import Careers from "./page/Caryers";
 import CSR from "./page/Csr";
 import Partnership from "./page/Partnyorship";
+import GMP from "./page/GMP";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: "/kso",
     element: <CSR />,
+  },
+  {
+    path: "/gmp",
+    element: <GMP />,
   },
 ]);
 
