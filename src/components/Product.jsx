@@ -122,6 +122,10 @@ export default function ProductsPage() {
                       src={product.image}
                       alt={product.name}
                       onError={handleImgError}
+                      loading="lazy"
+                      decoding="async"
+                      width={400}
+                      height={300}
                       className="w-full h-full object-contain transition-all duration-500 group-hover:scale-110"
                     />
                     <div

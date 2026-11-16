@@ -80,6 +80,10 @@ const ProductView = () => {
                   <img
                     src={product.image}
                     alt={product.name}
+                    loading="eager"
+                    decoding="async"
+                    width={700}
+                    height={500}
                     className="w-full h-[500px] object-contain"
                   />
                   {product.certification && product.certification !== "—" && (
