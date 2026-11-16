@@ -1,5 +1,34 @@
 // productsData.js - База данных всех продуктов с данными из PDF
-
+import cassi from "../assets/cassi.jpg";
+import congnitaz from "../assets/congnitaz.jpg";
+import aktivaz from "../assets/aktivaz.jpg";
+import hisgrador from "../assets/hisgrador.png";
+import hereliona from "../assets/hereliona.png";
+import kartaz from "../assets/kartaz.png";
+import nootroz from "../assets/nootroz.png";
+import richomegos from "../assets/richomegos.png";
+import vitazza from "../assets/vitazza.jpg";
+import stallaz from "../assets/stallaz.png";
+import allergidon from "../assets/allergidon.jpeg"
+import anemak from "../assets/anemak.jpeg"
+import bronhodokds from "../assets/bronhodokds.jpeg"
+import gorlozin from "../assets/gorlozin.jpeg"
+import deparazitol from "../assets/deparazitol.jpeg"
+import dermotonal from "../assets/dermotonal.jpeg"
+import diabetazol from "../assets/diabetazol.jpeg"
+import vetrogonin from "../assets/vetrogonin.jpeg"
+import zrenadol from "../assets/zrenadol.jpeg"
+import aguas from "../assets/aguas.png"
+import carbofer from "../assets/carbofer.png"
+import femista from "../assets/femista.png"
+import akitonozol from "../assets/akitonozol.png"
+import virtusin from "../assets/virtusin.jpeg"
+import vitalit from "../assets/vitalit.jpeg"
+import gastirak from "../assets/gastirak.jpeg"
+import gelmatoksin from "../assets/gelmatoksin.jpeg"
+import ginko from "../assets/ginko.jpeg"
+import dama from "../assets/dama.jpeg"
+import dentovital from "../assets/dentovital.jpeg"
 export const productsData = {
   sirop: { 
   1: {
@@ -8,8 +37,8 @@ export const productsData = {
       nameRu: "КАССI",
       tagline: "Biologik faol qo'shimcha bolalar uchun",
       taglineRu: "Биологически активная добавка для детей",
-      image: "https://www.dropbox.com/scl/fi/9e6c1mpna9ksfl59ue2gx/IMG_1928.JPG?rlkey=vm25x38e24ay9um9olx2eg6gg&raw=1",
-      pdf: "https://www.dropbox.com/scl/fi/h7wyverbcvoivfd1fp8e1/CASSI.pdf?rlkey=99938vg68i84ull1sr58sh62l&raw=1",
+      image: cassi,
+      pdf: "https://www.dropbox.com/scl/fi/h7wyverbcvoivfd1fp8e1/CASSI.pdf?rlkey=99938vg68i84ull1sr58sh62l&st=a2rqc3f2&dl=0 ",
       volume: "150 ml",
       form: "Suspenziya",
       rating: 4.8,
@@ -155,8 +184,8 @@ export const productsData = {
       nameRu: "АКТИВАЗ",
       tagline: "Chaqaloqlar va yosh bolalar uchun",
       taglineRu: "Для младенцев и маленьких детей",
-      image: "https://www.dropbox.com/scl/fi/hplz03sk3qkzd1g3rzr1w/IMG_1930.JPG?rlkey=bbpw7cmijv8dreqhocd61pweg&raw=1",
-      pdf: "https://www.dropbox.com/scl/fi/pcnznm2bdvdu5j9m06pr8/AKTIVAZ.pdf?rlkey=ufaoavkzg1yhm2yy8zhg1hwxi&raw=1",
+      image: aktivaz,
+      pdf: "https://www.dropbox.com/scl/fi/pcnznm2bdvdu5j9m06pr8/AKTIVAZ.pdf?rlkey=ufaoavkzg1yhm2yy8zhg1hwxi&st=ckwpxyis&dl=0",
       volume: "150 ml",
       form: "Sirop",
       rating: 4.9,
@@ -277,8 +306,8 @@ export const productsData = {
       nameRu: "ВИТАЗЗА",
       tagline: "Bolalar va kattalar uchun polivitamin kompleks",
       taglineRu: "Поливитаминный комплекс для детей и взрослых",
-      image: "https://www.dropbox.com/scl/fi/4u0lt9c41gqn0vv3yhrcv/IMG_1936.JPG?rlkey=660nbephy1ioyz2houmzma5sl&raw=1",
-      pdf: "https://www.dropbox.com/scl/fi/n0ni9q5b5m873n329u3cl/VITAZZA.pdf?rlkey=j1k5yt5sr0h8iquz1wkfye0hh&raw=1",
+      image: vitazza,
+      pdf: "https://www.dropbox.com/scl/fi/n0ni9q5b5m873n329u3cl/VITAZZA.pdf?rlkey=j1k5yt5sr0h8iquz1wkfye0hh&st=4pxadsc7&dl=0",
       volume: "150 ml",
       form: "Sirop",
       rating: 4.8,
@@ -412,8 +441,8 @@ export const productsData = {
     nameRu: "АЛЛЕРГИДОН",
     tagline: "Allergiyaga qarshi tabiiy himoya",
     taglineRu: "Натуральная защита от аллергии",
-    image: "https://www.dropbox.com/scl/fi/vxrfx3e5els58qghwexqt/allergidon.jpg?rlkey=74t5wvd3ehmus6qk4q09m4e2o&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/c7h7wvcr2wa5kx9jyufid/ALLERGIDON.pdf?rlkey=fvsib9xwa26z0ragiijvz9pe7&raw=1",
+    image: allergidon,
+    pdf: "https://www.dropbox.com/scl/fi/c7h7wvcr2wa5kx9jyufid/ALLERGIDON.pdf?rlkey=fvsib9xwa26z0ragiijvz9pe7&st=pcpamdo8&dl=0",
     volume: "150 ml",
     form: "O‘simlik ekstraktlari asosidagi sirop",
     rating: 4.6,
@@ -547,8 +576,8 @@ export const productsData = {
     nameRu: "АНЕМАК",
     tagline: "Qon va temir tanqisligi uchun",
     taglineRu: "Для крови и при дефиците железа",
-    image: "https://www.dropbox.com/scl/fi/exj4llpv9kzvp4y188udx/anemak.jpg?rlkey=n11n9e0gs33la8wszyis7qr13&st=7604t5k5&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/e3tuz1ur1xwfj50plokvm/ANEMAK-1.pdf?rlkey=gldzlwc830a6urdmu3rbbugbd&st=5n3sthrg&raw=1",
+    image: anemak,
+    pdf: "https://www.dropbox.com/scl/fi/e3tuz1ur1xwfj50plokvm/ANEMAK-1.pdf?rlkey=gldzlwc830a6urdmu3rbbugbd&st=ruuvp1c8&dl=0",
     volume: "150 ml",
     form: "Sirop (o‘simlik ekstraktlari)",
     rating: 4.8,
@@ -686,8 +715,8 @@ export const productsData = {
     nameRu: "БРОНХОДОКС",
     tagline: "Yo‘tal va bronxlar uchun",
     taglineRu: "От кашля и для бронхов",
-    image: "https://www.dropbox.com/scl/fi/8tdm7p6z69upcxyk5tvir/bronxodoks.jpg?rlkey=uq71dtbr8n8o3dt1ix8o27u4d&st=qtefmn2z&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/yex4m96ranhuhwyyjihys/BRONHODOKS.pdf?rlkey=6q7oajur7r4k9mymbir07t4va&st=3yfzbqgd&raw=1",
+    image: bronhodokds,
+    pdf: "https://www.dropbox.com/scl/fi/yex4m96ranhuhwyyjihys/BRONHODOKS.pdf?rlkey=6q7oajur7r4k9mymbir07t4va&st=7dgvt3h2&dl=0",
     volume: "150 ml",
     form: "Sirop (o‘simlik ekstraktlari)",
     rating: 4.8,
@@ -827,8 +856,8 @@ export const productsData = {
     nameRu: "ГОРЛОЗИН",
     tagline: "Tomoq va yuqori nafas yo‘llari uchun",
     taglineRu: "Для горла и верхних дыхательных путей",
-    image: "https://www.dropbox.com/scl/fi/fh5kutiidcxywi19kruo7/gorlozin.jpg?rlkey=qtxupoiy1vo01rdifmrgoj91k&st=sc4e5lwj&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/b8nkwqg46abl15jt6orkv/GORLOZIN-1.pdf?rlkey=z23z88fq8njy3zqioz3cenn5s&st=i2iylt06&raw=1",
+    image: gorlozin,
+    pdf: "https://www.dropbox.com/scl/fi/b8nkwqg46abl15jt6orkv/GORLOZIN-1.pdf?rlkey=z23z88fq8njy3zqioz3cenn5s&st=xcpqphh6&dl=0",
     volume: "150 ml",
     form: "O‘simlik siropi",
     rating: 4.7,
@@ -979,8 +1008,8 @@ export const productsData = {
     nameRu: "ДЕНТОВИТАЛ",
     tagline: "Og‘iz bo‘shlig‘i va tishlar salomatligi uchun",
     taglineRu: "Для здоровья полости рта и зубов",
-    image: "https://www.dropbox.com/scl/fi/ic0sx3hwqzsyfeki8vhd2/dentovital.jpg?rlkey=bjy6xblojmpgpmtldm136b0ui&st=yk9bsho4&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/w2zxts3ikuwv7159cqo7n/DENTOVITAL-1.pdf?rlkey=umgxblpb9pregxw04kdo7qcb8&st=14fqx05u&raw=1",
+    image: dentovital,
+    pdf: "https://www.dropbox.com/scl/fi/w2zxts3ikuwv7159cqo7n/DENTOVITAL-1.pdf?rlkey=umgxblpb9pregxw04kdo7qcb8&st=4y4q432r&dl=0",
     volume: "150 ml",
     form: "Og‘iz chayish siropi",
     rating: 4.8,
@@ -1117,8 +1146,8 @@ export const productsData = {
     nameRu: "ДЕПАРАЗИТОЛ",
     tagline: "Parazitlarga qarshi o‘simlik siropi",
     taglineRu: "Растительный сироп против паразитов",
-    image: "https://www.dropbox.com/scl/fi/mugrl3gt3kaso3xwhydhm/deparazitol-1.jpg?rlkey=q39rq0mgul0ibx17fb5rrldlv&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/02m7rijo9fpl5p538xh17/DEPARAZITOL.pdf?rlkey=11ifmtlzyq4vdgudn80np7ke0&raw=1",
+    image: deparazitol,
+    pdf: "https://www.dropbox.com/scl/fi/02m7rijo9fpl5p538xh17/DEPARAZITOL.pdf?rlkey=11ifmtlzyq4vdgudn80np7ke0&st=c271d5rt&dl=0",
     volume: "150 ml",
     form: "O‘simlik ekstraktlari asosidagi sirop",
     rating: 4.6,
@@ -1275,8 +1304,8 @@ export const productsData = {
     nameRu: "ДЕРМОТОНАЛ",
     tagline: "Teri va yallig‘lanish kasalliklari uchun",
     taglineRu: "Для кожи и воспалительных заболеваний",
-    image: "https://www.dropbox.com/scl/fi/ns2tx8ksckpmjevwjg0kd/dermotonal.jpg?rlkey=vm5gkkoripo43mxnt9zh2hbmb&st=9vlsruuy&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/k6qshstijann2l4jld6te/DERMOTONAL-1.pdf?rlkey=my55ijxiz5m5ln03hudq250ro&st=cdwt85iu&raw=1",
+    image: dermotonal,
+    pdf: "https://www.dropbox.com/scl/fi/k6qshstijann2l4jld6te/DERMOTONAL-1.pdf?rlkey=my55ijxiz5m5ln03hudq250ro&st=t29rd74a&dl=0",
     volume: "150 ml",
     form: "Tashqi qo‘llash uchun o‘simlik siropi",
     rating: 4.7,
@@ -1413,8 +1442,8 @@ export const productsData = {
     nameRu: "ДИАБЕТАЗОЛ",
     tagline: "Qand miqdorini nazorat qilish va metabolizm uchun",
     taglineRu: "Для контроля сахара и обмена веществ",
-    image: "https://www.dropbox.com/scl/fi/a6usqyqyos58wfbwlmzn4/diabetazol-1.jpg?rlkey=lssdnomk36fj9y8krl2cu3bqr&st=eb2v3de5&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/onz2819dj5ovcukdpj7gu/DIABETAZOL-sirop.pdf?rlkey=bdp2xsg81yfyibqc2ssm0z6wf&st=yh94kpwm&raw=1",
+    image: diabetazol,
+    pdf: "https://www.dropbox.com/scl/fi/s66ibbqcwj8fm4t0nihz9/DIABETAZOL-tabletka.pdf?rlkey=xpcuc7ogn3qhq4p3ey144aq4f&st=oi931409&dl=0",
     volume: "150 ml",
     form: "O‘simlik siropi",
     rating: 4.8,
@@ -1545,15 +1574,14 @@ export const productsData = {
       { text: "Detoks", textRu: "Детокс" }
     ]
   },
-
   18:{
     id: 18,
     name: "VETROGONIN",
     nameRu: "ВЕТРОГОНИН",
     tagline: "Ichak va gaz muammolariga qarshi tabiiy yechim",
     taglineRu: "Натуральное средство от газообразования и колик",
-    image: "https://www.dropbox.com/scl/fi/ndqo4p1dq09sribvri7v3/vetrogonin.jpg?rlkey=bpnr8ls1w9cwrc9bd2gm3fu75&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/4fxw6pxawnj6nsa8l8vz8/VETROGONIN-1.pdf?rlkey=lg6hicj0hokj9q74r9aall1bu&raw=1",
+    image: vetrogonin,
+    pdf: "https://www.dropbox.com/scl/fi/4fxw6pxawnj6nsa8l8vz8/VETROGONIN-1.pdf?rlkey=lg6hicj0hokj9q74r9aall1bu&st=alm9kw0k&dl=0",
     volume: "150 ml",
     form: "O‘simlik ekstraktlari asosidagi sirop",
     rating: 4.7,
@@ -1712,8 +1740,8 @@ export const productsData = {
     nameRu: "ЗРЕНОДОЛ ЧЕРНИКА",
     tagline: "Ko‘rish qobiliyatini qo‘llab-quvvatlovchi sirop",
     taglineRu: "Сироп для поддержки зрения",
-    image: "https://www.dropbox.com/scl/fi/8ymi5bas5zfgon4o3797o/zrenadol.jpg?rlkey=v24uir1uy4jaeswl8gqubhvng&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/p9hcfa0tlgmlbrm1v58yf/ZRENODOL-CHERNIKA.pdf?rlkey=dkj74txs4b68dhpe6wx95zhsl&raw=1",
+    image: zrenadol,
+    pdf: "https://www.dropbox.com/scl/fi/p9hcfa0tlgmlbrm1v58yf/ZRENODOL-CHERNIKA.pdf?rlkey=dkj74txs4b68dhpe6wx95zhsl&st=rs045fgg&dl=0",
     volume: "150 ml",
     form: "O‘simlik ekstraktlari asosidagi sirop",
     rating: 4.7,
@@ -1848,8 +1876,8 @@ export const productsData = {
       nameRu: "КОГНИТАЗ",
       tagline: "Miya faoliyatini yaxshilovchi BFQ",
       taglineRu: "БАД для улучшения мозговой деятельности",
-      image: "https://www.dropbox.com/scl/fi/414nqrsttxphlqzpgrkxq/IMG_1929.JPG?rlkey=hygxccpleo6ulus2ngwa7otxp&raw=1",
-      pdf: "https://www.dropbox.com/scl/fi/r7f5j75udrfis98z3jrr2/COGNITAZ.pdf?rlkey=ew8u7qodsn1essgow1192ivwv&raw=1",
+      image: congnitaz,
+      pdf: "https://www.dropbox.com/scl/fi/r7f5j75udrfis98z3jrr2/COGNITAZ.pdf?rlkey=ew8u7qodsn1essgow1192ivwv&st=eogndavt&dl=0",
       volume: "30 tabletka",
       form: "Tabletka",
       rating: 4.7,
@@ -1954,18 +1982,15 @@ export const productsData = {
         { text: "Qo'shimcha moddalar yo'q", textRu: "Без добавок" },
         { text: "Vegetarian", textRu: "Вегетарианский" }
       ]
-    },
-  
-  
-  
+    },  
     4: {
       id: 4,
       name: "HIS GRADOR",
       nameRu: "ХИС ГРАДОР",
       tagline: "Erkaklar salomatligi uchun",
       taglineRu: "Для мужского здоровья",
-      image: "https://www.dropbox.com/scl/fi/nl6bdh86e9czkolhqbwfd/IMG_1931.PNG?rlkey=yr27hf1v98drwor521smxonnw&raw=1",
-      pdf: "https://www.dropbox.com/scl/fi/iesd3ckspgcv5343xk424/GRADOR.pdf?rlkey=stbs6z4oj626fj4rpyytlyi0o&raw=1",
+      image: hisgrador,
+      pdf: "https://www.dropbox.com/scl/fi/ueu04d1r1eu80rg30yspq/HIS_GRADOR-web.docx?rlkey=bybzrtyz0nwuxc1mwvncoopx0&st=xg01ieh7&dl=0",
       volume: "30 kapsul",
       form: "Yumshoq jelatin kapsulalari",
       rating: 4.8,
@@ -2141,15 +2166,15 @@ export const productsData = {
         { text: "Kliniyaviy sinovdan o'tgan", textRu: "Клинически проверено" }
       ]
     },
-  
+
     5: {
       id: 5,
       name: "HER ELIONA",
       nameRu: "ХЕР ЭЛИОНА",
       tagline: "Ayollar salomatligi va go'zalligi uchun",
       taglineRu: "Для женского здоровья и красоты",
-      image: "https://www.dropbox.com/scl/fi/gq20r4ww3kxeerc1a6bmt/IMG_1932.PNG?rlkey=m6ji1um55grb8usq68rx5bkh8&raw=1",
-      pdf: "https://www.dropbox.com/scl/fi/p20ywwrk2lz19zjobv0y6/HER-ELIONA.pdf?rlkey=y8rrb9s7cp9qzsdvzowqgbmn2&raw=1",
+      image: hereliona,
+      pdf: "https://www.dropbox.com/scl/fi/x9wkm6rqtbwurc6vpm7ge/HER-ELIONA-vitarion-web.docx?rlkey=r9q2mwe93i93m4yluwptnv7yi&st=v0spwnnv&dl=0",
       volume: "30 kapsul",
       form: "Yumshoq jelatin kapsulalari",
       rating: 4.9,
@@ -2320,8 +2345,8 @@ export const productsData = {
       nameRu: "КАРТАЗ",
       tagline: "Bo'g'imlar salomatligi uchun",
       taglineRu: "Для здоровья суставов",
-      image: "https://www.dropbox.com/scl/fi/sto1z2abwno8xx83ca7iv/IMG_1933.PNG?rlkey=3qrtnahbv2td1i18mwvqui8kq&raw=1",
-      pdf: "https://www.dropbox.com/scl/fi/8g8lz7co7jltu5j7xkh48/KARTAZ.pdf?rlkey=x0tmta6paex9czq2jzlxpa386&raw=1",
+      image: kartaz,
+      pdf: "https://www.dropbox.com/scl/fi/8g8lz7co7jltu5j7xkh48/KARTAZ.pdf?rlkey=x0tmta6paex9czq2jzlxpa386&st=ngpuztkh&dl=0",
       volume: "30 kapsul",
       form: "Yumshoq jelatin kapsulalari",
       rating: 4.7,
@@ -2447,8 +2472,8 @@ export const productsData = {
       nameRu: "НУТРОЗ",
       tagline: "Miya faoliyati va xotira uchun",
       taglineRu: "Для мозговой деятельности и памяти",
-      image: "https://www.dropbox.com/scl/fi/mrkm207aijfbkelkeuuol/IMG_1934.PNG?rlkey=2gbjkhuecb2q0zsjktpyoxwpm&raw=1",
-      pdf: "https://www.dropbox.com/scl/fi/kadmc1zktspjibrlbtdnf/NOOTROZ.pdf?rlkey=mfkhhvpnfxuauoe0r9o10nk7v&raw=1",
+      image: nootroz,
+      pdf: "https://www.dropbox.com/scl/fi/kadmc1zktspjibrlbtdnf/NOOTROZ.pdf?rlkey=mfkhhvpnfxuauoe0r9o10nk7v&st=pwz63h9x&dl=0",
       volume: "30 kapsul",
       form: "Yumshoq jelatin kapsulalari",
       rating: 4.8,
@@ -2609,8 +2634,8 @@ export const productsData = {
       nameRu: "РИЧ ОМЕГОС",
       tagline: "Yuqori konsentratsiyali Omega-3",
       taglineRu: "Высококонцентрированная Омега-3",
-      image: "https://www.dropbox.com/scl/fi/iqk0fkodd1m93fphiys2a/IMG_1935.PNG?rlkey=s0ar2x1mfq4qvwofyxtn6hvsa&raw=1",
-      pdf: "https://www.dropbox.com/scl/fi/zxmy8f6g4p9j06xlmz1my/RICH-OMEGOS.pdf?rlkey=s3u7obxvycxqrvp1g2iuj5y0e&raw=1",
+      image: richomegos,
+      pdf: "https://www.dropbox.com/scl/fi/zxmy8f6g4p9j06xlmz1my/RICH-OMEGOS.pdf?rlkey=s3u7obxvycxqrvp1g2iuj5y0e&st=g28omp9i&dl=0",
       volume: "30 kapsul",
       form: "Yumshoq jelatin kapsulalari",
       rating: 4.9,
@@ -2732,17 +2757,14 @@ export const productsData = {
         { text: "Kliniyaviy sinovdan o'tgan", textRu: "Клинически проверено" }
       ]
     },
-  
-  
-  
     10: {
       id: 10,
       name: "STALAZ",
       nameRu: "СТАЛАЗ",
       tagline: "Suyaklar va yurak-qon tomir tizimi uchun",
       taglineRu: "Для костей и сердечно-сосудистой системы",
-      image: "https://www.dropbox.com/scl/fi/66nzpvql4n1afavf12o42/IMG_1937.PNG?rlkey=tdrrbcxsb47xmotrhm22b4k40&raw=1",
-      pdf: "https://www.dropbox.com/scl/fi/s0zu2mps91m3exh99dp2n/STALAZ.pdf?rlkey=l92r8xedkn7aur61mao1yfm34&raw=1",
+      image: stallaz,
+      pdf: "https://www.dropbox.com/scl/fi/s0zu2mps91m3exh99dp2n/STALAZ.pdf?rlkey=l92r8xedkn7aur61mao1yfm34&st=1f0noxjr&dl=0",
       volume: "30 kapsul",
       form: "Yumshoq jelatin kapsulalari",
       rating: 4.7,
@@ -2908,8 +2930,8 @@ export const productsData = {
     nameRu: "АГУАС",
     tagline: "Bo‘g‘imlar va tayanch-harakat tizimi uchun",
     taglineRu: "Для суставов и опорно-двигательной системы",
-    image: "https://www.dropbox.com/scl/fi/pspn2gvadkxrjyel3xzwr/aguas3d.png?rlkey=qadi1mvumph1na3dc5jrrwcde&st=eedi9i79&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/lw5divc3qxzw4nnpw2dpd/flayer-aguas.pdf?rlkey=krdmv5gp2a50uwt07nozl5zao&st=bknyd3uf&raw=1",
+    image: aguas,
+    pdf: "https://www.dropbox.com/scl/fi/lw5divc3qxzw4nnpw2dpd/flayer-aguas.pdf?rlkey=krdmv5gp2a50uwt07nozl5zao&st=n2z09hf2&dl=0",
     volume: "450 mg",
     form: "Qattiq jelatin kapsulalari",
     rating: 4.8,
@@ -3037,8 +3059,8 @@ export const productsData = {
     nameRu: "КАРБОФЕР",
     tagline: "Qon hosil bo‘lishi va temir yetishmovchiligiga qarshi",
     taglineRu: "Для кроветворения и восполнения дефицита железа",
-    image: "https://www.dropbox.com/scl/fi/4fyknpfr8aq2q8ehs3g9s/carbofer-new.png?rlkey=z04gb9wu14hf5amq9rwmzoq9o&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/y4fdhg8gl58k1jyyc0rgz/CARBOFER-Qollanma.pdf?rlkey=svh01msx378sva1cm0jvyatpb&raw=1",
+    image: carbofer,
+    pdf: "https://www.dropbox.com/scl/fi/y4fdhg8gl58k1jyyc0rgz/CARBOFER-Qollanma.pdf?rlkey=svh01msx378sva1cm0jvyatpb&st=yxoeac3x&dl=0",
     volume: "30 kapsul",
     form: "Kapsulalar",
     rating: 4.8,
@@ -3191,8 +3213,8 @@ export const productsData = {
     nameRu: "ФЕМИСТА",
     tagline: "Ayollar reproduktiv salomatligi uchun",
     taglineRu: "Для женского репродуктивного здоровья",
-    image: "https://www.dropbox.com/scl/fi/grdsqn7pm27lor60wjqjf/Femista.png?rlkey=xiv9gfubkrocseq81gr9u6rlq&st=sxzq308t&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/bppz3qtzxo9pbjy55h3g4/Femista-flyer.pdf?rlkey=wccdv1c0okx4lix47ecjwvcvr&st=y4np92k8&raw=1",
+    image: femista,
+    pdf: "https://www.dropbox.com/scl/fi/bppz3qtzxo9pbjy55h3g4/Femista-flyer.pdf?rlkey=wccdv1c0okx4lix47ecjwvcvr&st=5eqitn5w&dl=0",
     volume: "30 sasha",
     form: "Sashe paketlar (poroshok)",
     rating: 4.9,
@@ -3361,8 +3383,8 @@ export const productsData = {
     nameRu: "АКИТОНОЗОЛ",
     tagline: "Qalqonsimon bez salomatligi uchun",
     taglineRu: "Для здоровья щитовидной железы",
-    image: "https://www.dropbox.com/scl/fi/m5vr7da45gkk73s1iv3ye/akitonozol-1.jpg?rlkey=469indghrr66u98e16px1lmvq&st=t88w4wm3&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/1vhk5jjdpcwnkzaqmy4n2/AKITONOZOL-1-1.pdf?rlkey=wlz01aavcjwuvin0atyvrsy5x&st=jr2wiv8w&raw=1",
+    image: akitonozol,
+    pdf: "https://www.dropbox.com/scl/fi/0pop1u25bwx3e27x80een/AKITONOZOL-1.pdf?rlkey=jjheia8lkouxj5dd4uivvrbr4&st=m3cfyvd4&dl=0",
     volume: "60 tabletka (0.5 g)",
     form: "O‘simlik asosidagi tabletkalar",
     rating: 4.7,
@@ -3506,8 +3528,8 @@ export const productsData = {
     nameRu: "ВИРТУСИН",
     tagline: "Erkaklar salomatligi va quvvat uchun",
     taglineRu: "Для мужского здоровья и потенции",
-    image: "https://www.dropbox.com/scl/fi/wa8oyqsprdvneh3wl3no4/virtusin.jpg?rlkey=4zrt5sgrxj2o2iwwkyr97a0mu&st=9mflq2xb&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/sj7r4ij9fzgpz8ieh8d0j/VIRTUSIN-1.pdf?rlkey=i7bu96n67xawjvxwzqr75u57e&st=uflzl5xz&raw=1",
+    image: virtusin,
+    pdf: "https://www.dropbox.com/scl/fi/sj7r4ij9fzgpz8ieh8d0j/VIRTUSIN-1.pdf?rlkey=i7bu96n67xawjvxwzqr75u57e&st=fdkt2ghk&dl=0",
     volume: "60 tabletka (0.5 g)",
     form: "O‘simlik asosidagi tabletkalar",
     rating: 4.8,
@@ -3646,8 +3668,8 @@ export const productsData = {
     nameRu: "ВИТАЛИТ",
     tagline: "Umumiy salomatlik va immunitet uchun",
     taglineRu: "Для общего здоровья и иммунитета",
-    image: "https://www.dropbox.com/scl/fi/ms7uzjez9qo63phcxm7gm/vitalit.jpg?rlkey=yxvbwysj5kywix997t0cvzio9&st=wa0d6eqj&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/4cotcacl6xg69v11mgcqg/VITALIT-1.pdf?rlkey=x4v5hht7hsti62fxo4lfe7993&st=gvzycu1z&raw=1",
+    image: vitalit, 
+    pdf: "https://www.dropbox.com/scl/fi/4cotcacl6xg69v11mgcqg/VITALIT-1.pdf?rlkey=x4v5hht7hsti62fxo4lfe7993&st=ojyrfk3a&dl=0",
     volume: "60 tabletka",
     form: "O‘simlik asosidagi tabletkalar",
     rating: 4.9,
@@ -3785,8 +3807,8 @@ export const productsData = {
     nameRu: "ГАСТИРАК",
     tagline: "Oshqozon kislotaligi va hazm muammolariga qarshi",
     taglineRu: "Против повышенной кислотности и проблем ЖКТ",
-    image: "https://www.dropbox.com/scl/fi/liwbaqdmzo0xl84xlc7hv/gastirak.jpg?rlkey=wsy86ygx8hs8akj3skyzfw6rh&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/svvmw7rxdra2hcfmil5qv/GASTIRAK-1.pdf?rlkey=w5dlm2y49zo2l13o80o9c4k3z&raw=1",
+    image: gastirak,
+    pdf: "https://www.dropbox.com/scl/fi/svvmw7rxdra2hcfmil5qv/GASTIRAK-1.pdf?rlkey=w5dlm2y49zo2l13o80o9c4k3z&st=k0im5wnu&dl=0",
     volume: "60 tabletka (0.5 g)",
     form: "O‘simlik asosidagi tabletkalar",
     rating: 4.7,
@@ -3943,8 +3965,8 @@ export const productsData = {
     nameRu: "ГЕЛМОТОКСИН",
     tagline: "Parazitlarga qarshi tabiiy kompleks",
     taglineRu: "Натуральный комплекс против паразитов",
-    image: "https://www.dropbox.com/scl/fi/aylc8gm6rxw9matc2t3ab/gelmotoksin.jpg?rlkey=a3k2in8tfqfzvb00itvie6iei&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/bacu3ttwyfatxjjjykos2/GELMOTOKSIN-1.pdf?rlkey=2ha26ou7owvxw47gkh40fikzn&raw=1",
+    image: gelmatoksin,
+    pdf: "https://www.dropbox.com/scl/fi/bacu3ttwyfatxjjjykos2/GELMOTOKSIN-1.pdf?rlkey=2ha26ou7owvxw47gkh40fikzn&st=z6kd9501&dl=0",
     volume: "60 tabletka (0.5 g)",
     form: "O‘simlik asosidagi tabletkalar",
     rating: 4.7,
@@ -4101,7 +4123,7 @@ export const productsData = {
     nameRu: "ГИНКО КАРДИОЗЕН",
     tagline: "Yurak va qon tomir tizimi uchun",
     taglineRu: "Для сердца и сосудов",
-    image: "https://www.dropbox.com/scl/fi/anx1hz27i11ty3ks73qx6/ginko-1.jpg?rlkey=f21hhvj4efyrbqode8g1yoxy0&st=5c2pplc0&raw=1",
+    image: ginko,
     pdf: "https://www.dropbox.com/scl/fi/5w9f122h0iri20dnlefkk/GINKO-KARDIOZEN.pdf?rlkey=ikis7zkh3z7tul905w2b1opn5&st=ytti4r9f&raw=1",
     volume: "60 tabletka (0.5 g)",
     form: "O‘simlik asosidagi tabletkalar",
@@ -4245,8 +4267,8 @@ export const productsData = {
     nameRu: "ДАМА ПЕРФЕТТА",
     tagline: "Go‘zallik va yoshlikni qo‘llab-quvvatlovchi kompleks",
     taglineRu: "Комплекс для красоты и молодости кожи",
-    image: "https://www.dropbox.com/scl/fi/o946aguqyivmmcokrqskz/DAMA.jpg?rlkey=7b0kfmd5qtqjqfpgbz9qrztwv&st=9uhqzzrv&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/6m43ieyagnaw4jc0ij2f7/Dama-Perfetta-Instructions-RU-ENG-UZ-1.pdf?rlkey=sygcm0unvrkr002t735tgjaue&st=v9atzz5y&raw=1",
+    image: dama,
+    pdf: "https://www.dropbox.com/scl/fi/6m43ieyagnaw4jc0ij2f7/Dama-Perfetta-Instructions-RU-ENG-UZ-1.pdf?rlkey=sygcm0unvrkr002t735tgjaue&st=7hmcgfvq&dl=0",
     volume: "30 tabletka (1150 mg)",
     form: "Plyonka bilan qoplangan tabletkalar",
     rating: 4.8,
@@ -4446,166 +4468,6 @@ export const productsData = {
       { text: "Tabiiy tarkib", textRu: "Натуральный состав" }
     ]
   },
-
-  30: {
-    id: 30,
-    name: "DIABETAZOL",
-    nameRu: "ДИАБЕТАЗОЛ",
-    tagline: "Qon shakarini nazorat qilish uchun o‘simlik kompleks",
-    taglineRu: "Растительный комплекс для контроля сахара в крови",
-    image: "https://www.dropbox.com/scl/fi/qpttb25nm8c782o14yfhm/DIABETAZOL.jpg?rlkey=o7gnkmf6ihqhovizva50cunnn&raw=1",
-    pdf: "https://www.dropbox.com/scl/fi/s66ibbqcwj8fm4t0nihz9/DIABETAZOL-tabletka.pdf?rlkey=xpcuc7ogn3qhq4p3ey144aq4f&raw=1",
-    volume: "60 tabletka (0.5 g)",
-    form: "O‘simlik asosidagi tabletkalar",
-    rating: 4.7,
-    reviews: 856,
-    manufacturer: "—",
-    certification: "—",
-    price: "—",
-    currency: "сум",
-  
-    composition: [
-      { name: "Lюserna (Medicago sativa)", amount: "—", per: "1 tabletka" },
-      { name: "Topinambur (Helianthus tuberosus)", amount: "—", per: "1 tabletka" },
-      { name: "Lopux ildizi (Arctium lappa)", amount: "—", per: "1 tabletka" },
-      { name: "Pajitnik (Trigonella foenum-graecum)", amount: "—", per: "1 tabletka" },
-      { name: "Krapiva (Urtica dioica)", amount: "—", per: "1 tabletka" },
-      { name: "Brusnika bargi (Vaccinium vitis-idaea)", amount: "—", per: "1 tabletka" }
-    ],
-  
-    benefits: [
-      {
-        title: "Qon shakarini pasaytirish",
-        titleRu: "Снижение уровня сахара в крови",
-        description: "Glyukoza darajasini barqarorlashtirishga yordam beradi",
-        descriptionRu: "Помогает стабилизировать уровень глюкозы",
-        icon: "🩸"
-      },
-      {
-        title: "Metabolizmni qo‘llab-quvvatlash",
-        titleRu: "Поддержка обмена веществ",
-        description: "Uglevod va yog‘ almashinuvini yaxshilaydi",
-        descriptionRu: "Улучшает углеводный и жировой обмен",
-        icon: "⚙️"
-      },
-      {
-        title: "Qon tomirlarni mustahkamlash",
-        titleRu: "Укрепление сосудов",
-        description: "Mikrotsirkulyatsiyani yaxshilaydi",
-        descriptionRu: "Улучшает микроциркуляцию крови",
-        icon: "🫀"
-      },
-      {
-        title: "Og‘irlikni nazorat qilish",
-        titleRu: "Контроль веса",
-        description: "Ortiqcha vaznni kamaytirishga yordam beradi",
-        descriptionRu: "Способствует снижению лишнего веса",
-        icon: "⚖️"
-      }
-    ],
-  
-    ingredients: [
-      {
-        name: "Lюserna",
-        nameRu: "Люцерна",
-        icon: "🌿",
-        benefits: [
-          "Qon shakarini pasaytiradi",
-          "Detoks ta’sir",
-          "Immunitetni qo‘llab-quvvatlaydi",
-          "Yallig‘lanishga qarshi"
-        ]
-      },
-      {
-        name: "Topinambur",
-        nameRu: "Топинамбур",
-        icon: "🥔",
-        benefits: [
-          "Inulin manbai",
-          "Glyukozani tartibga soladi",
-          "Ichak mikroflorasini yaxshilaydi",
-          "Metabolizmni qo‘llab-quvvatlaydi"
-        ]
-      },
-      {
-        name: "Lopux",
-        nameRu: "Лопух",
-        icon: "🌿",
-        benefits: [
-          "Pankreas faoliyatini qo‘llab-quvvatlaydi",
-          "Metabolizmni yaxshilaydi",
-          "Detoks ta’sir",
-          "Qon tozalash"
-        ]
-      },
-      {
-        name: "Pajitnik",
-        nameRu: "Пажитник",
-        icon: "🌱",
-        benefits: [
-          "Qon shakarini kamaytiradi",
-          "Insulin sezgirligini oshiradi",
-          "Hazmni yaxshilaydi",
-          "Energiya beradi"
-        ]
-      },
-      {
-        name: "Krapiva",
-        nameRu: "Крапива",
-        icon: "🌿",
-        benefits: [
-          "Glyukoza darajasini pasaytiradi",
-          "Qon tozalash",
-          "Vitaminlar manbai",
-          "Metabolizmni yaxshilaydi"
-        ]
-      },
-      {
-        name: "Brusnika",
-        nameRu: "Брусника",
-        icon: "🍒",
-        benefits: [
-          "Antibakterial ta’sir",
-          "Yallig‘lanishga qarshi",
-          "Qon shakarini qo‘llab-quvvatlaydi",
-          "Buyrak faoliyatini yaxshilaydi"
-        ]
-      }
-    ],
-  
-    usage: {
-      dosage: "Kattalar: 2 tabletka kuniga 3 marta",
-      dosageRu: "Взрослым: по 2 таблетки 3 раза в день",
-      timing: "Ovqat paytida",
-      timingRu: "Во время еды",
-      duration: "1 oy, qayta kurs 1 haftadan keyin",
-      durationRu: "1 месяц, повторный курс через неделю",
-      instruction: "Suv bilan qabul qilish tavsiya etiladi",
-      instructionRu: "Принимать с водой"
-    },
-  
-    contraindications: [
-      "Individual intolerans",
-      "Homiladorlik va emizish davri",
-      "Komponentlarga sezgirlik"
-    ],
-  
-    storage: [
-      "Harorat: +2°C dan +25°C gacha",
-      "Quruq va qorong‘i joyda",
-      "Bolalardan yiroqda saqlash"
-    ],
-  
-    shelfLife: "24 oy",
-  
-    features: [
-      { text: "Qon shakarini nazorat qilish", textRu: "Контроль сахара в крови" },
-      { text: "Metabolik balans", textRu: "Метаболический баланс" },
-      { text: "Tabiiy tarkib", textRu: "Натуральный состав" },
-      { text: "Vaskulyar qo‘llab-quvvatlash", textRu: "Поддержка сосудов" }
-    ]
-  }
-
  }
 };
 

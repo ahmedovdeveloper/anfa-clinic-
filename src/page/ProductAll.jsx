@@ -39,6 +39,7 @@ const translations = {
   },
 };
 
+
 // Flatten all groups into a flat array with _categoryKey tag
 const getAllProducts = () => {
   const result = [];
@@ -166,7 +167,7 @@ const ProductAll = () => {
 
               <div className="relative h-52 mb-5 overflow-hidden rounded-2xl bg-slate-50">
                 <img
-                  src={product.image}
+                  src={`${product.image}`}
                   alt={product.name}
                   className="w-full h-full object-contain group-hover:scale-110 transition duration-500"
                 />
