@@ -1,8 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import IMG1 from "../assets/s1.png";
-import IMG2 from "../assets/s2.png";
-import IMG3 from "../assets/s3.png";
+import IMG1 from "../assets/s1.webp";
+import IMG2 from "../assets/s2.webp";
+import IMG3 from "../assets/s3.webp";
 import "swiper/css";
 import "swiper/css/pagination";
 const images = [

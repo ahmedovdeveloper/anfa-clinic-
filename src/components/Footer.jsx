@@ -99,7 +99,7 @@ const Footer = () => {
             {/* Logo */}
             <div className="space-y-6">
               <div className="floating">
-                <img src="/logo.png" alt="ANFA Pharmaceuticals" className="h-20" />
+                <img src="/logo.webp" alt="ANFA Pharmaceuticals" className="h-20" />
               </div>
               <p className="text-white/80 text-sm">
                 {t("footer.aboutText")}

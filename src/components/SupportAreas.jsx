@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const areas = [
-  { key: "gastroenterology", icon: "/stomach.png" },
-  { key: "dermatology", icon: "/skin.png" },
-  { key: "cardiology", icon: "/heart.png" },
-  { key: "neurology", icon: "/brain.png" },
-  { key: "ent", icon: "/ear.png" },
-  { key: "pulmonology", icon: "/lungs.png" },
-  { key: "urology", icon: "/kidneys.png" },
-  { key: "phyto", icon: "/plant.png" },
+  { key: "gastroenterology", icon: "/stomach.webp" },
+  { key: "dermatology", icon: "/skin.webp" },
+  { key: "cardiology", icon: "/heart.webp" },
+  { key: "neurology", icon: "/brain.webp" },
+  { key: "ent", icon: "/ear.webp" },
+  { key: "pulmonology", icon: "/lungs.webp" },
+  { key: "urology", icon: "/kidneys.webp" },
+  { key: "phyto", icon: "/plant.webp" },
 ];
 
 export default function SupportAreas() {

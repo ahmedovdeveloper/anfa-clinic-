@@ -21,16 +21,16 @@ const PLACEHOLDER =
 
 // Файлы должны лежать в: public/assets/
 // Имена и регистр должны совпадать ТОЧНО с реальными файлами
-import cassi from "../assets/cassi.jpg";
-import congnitaz from "../assets/congnitaz.jpg";
-import aktivaz from "../assets/aktivaz.jpg";
-import hisgrador from "../assets/hisgrador.png";
-import hereliona from "../assets/hereliona.png";
-import kartaz from "../assets/kartaz.png";
-import nootroz from "../assets/nootroz.png";
-import richomegos from "../assets/richomegos.png";
-import vitazza from "../assets/vitazza.jpg";
-import stallaz from "../assets/stallaz.png";
+import cassi from "../assets/cassi.webp";
+import congnitaz from "../assets/congnitaz.webp";
+import aktivaz from "../assets/aktivaz.webp";
+import hisgrador from "../assets/hisgrador.webp";
+import hereliona from "../assets/hereliona.webp";
+import kartaz from "../assets/kartaz.webp";
+import nootroz from "../assets/nootroz.webp";
+import richomegos from "../assets/richomegos.webp";
+import vitazza from "../assets/vitazza.webp";
+import stallaz from "../assets/stallaz.webp";
 
 const products = [
   { id: 1, name: "CASSI", image: cassi },

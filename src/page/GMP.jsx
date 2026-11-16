@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import certImg from "../assets/sertificat.png";
-import gmpLogo from "../assets/gmp.jpg";
+import certImg from "../assets/sertificat.webp";
+import gmpLogo from "../assets/gmp.webp";
 import Header from "../components/Header";
 
 export default function GMP() {

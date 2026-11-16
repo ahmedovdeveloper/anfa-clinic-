@@ -467,10 +467,10 @@ ${formData.message || "—"}
   // Партнеры (логотипы и имена остаются одинаковыми)
   const partnersData = [
     { id: 1, name: tr.partners?.micros || "Micros Pac", logo: "/micros.svg" },
-    { id: 2, name: tr.partners?.minzdrav || "Узбекистон Республикаси Согликни саклаш вазирлиги", logo: "/uzb.png" },
-    { id: 3, name: tr.partners?.ozstandart || "o'zstandart agentligi", logo: "/stz.png" },
-    { id: 5, name: tr.partners?.chamber || "o'zbekiston savdo sanoat palatasi", logo: "/ozdi.jpg" },
-    { id: 88, name: tr.partners?.lidep || "oz lidep", logo: "/uzb2.jpg" },
+    { id: 2, name: tr.partners?.minzdrav || "Узбекистон Республикаси Согликни саклаш вазирлиги", logo: "/uzb.webp" },
+    { id: 3, name: tr.partners?.ozstandart || "o'zstandart agentligi", logo: "/stz.webp" },
+    { id: 5, name: tr.partners?.chamber || "o'zbekiston savdo sanoat palatasi", logo: "/ozdi.webp" },
+    { id: 88, name: tr.partners?.lidep || "oz lidep", logo: "/uzb2.webp" },
   ];
 
   return (
