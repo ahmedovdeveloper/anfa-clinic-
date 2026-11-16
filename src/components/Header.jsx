@@ -144,7 +144,7 @@ export default function Header() {
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity"></div>
                 <Link to="/" className="relative rounded-2xl group-hover:scale-105 transition-transform duration-300">
-                  <img src="/logo.webp" alt="Logo" className="w-15" />
+                  <img src="/logo.png" alt="Logo" className="w-15" />
                 </Link>
               </div>
             </div>
@@ -272,7 +272,7 @@ export default function Header() {
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
                   <Link to="/" className="p-3">
-                    <img src="/logo.webp" alt="logo" className="w-15" />
+                    <img src="/logo.png" alt="logo" className="w-15" />
                   </Link>
                 </div>
                 <button

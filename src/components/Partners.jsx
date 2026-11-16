@@ -17,22 +17,22 @@ const partnersData = [
   {
     id: 2,
     name: "Узбекистон Республикаси Согликни саклаш вазирлиги",
-    logo: "/uzb.webp",
+    logo: "/uzb.png",
   },
   {
     id: 3,
     name: "o'zstandart agentligi",
-    logo: "/stz.webp",
+    logo: "/stz.png",
   },
   {
     id: 5,
     name: "o'zbekiston savdo sanoat palatasi",
-    logo: "/ozdi.webp",
+    logo: "/ozdi.jpg",
   },
   {
     id: 88,
     name: "oz lidep",
-    logo: "/uzb2.webp",
+    logo: "/uzb2.jpg",
   },
 ];
 
