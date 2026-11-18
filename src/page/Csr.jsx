@@ -23,6 +23,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "swiper/css";
 import "swiper/css/pagination";
+import csr1 from '../assets/csr1.jpg'
+import csr2 from '../assets/csr2.jpg'
+import csr3 from '../assets/csr3.jpg'
+import csr4 from '../assets/csr4.jpg'
+
 
 // ─── SVG IMAGES ───────────────────────────────────────────────────────────────
 const PillsImage = () => (
@@ -182,21 +187,9 @@ const productStyles = [
   },
 ];
 
-const productImages = [
-  "https://www.dropbox.com/scl/fi/a79f7551urqnb59g8dmeh/7a9a3226-0772-47f6-96bd-2e71fe95d16f-removebg-preview.png?rlkey=pb1g2adx0xnnirc53x9cv13dv&st=xqr5ba68&raw=1",
-  "https://www.dropbox.com/scl/fi/dlbks3fjtqpj6l72rozch/21a62c02-17cd-43e8-8f96-9ac3650a0950-removebg-preview.png?rlkey=aqf8a94hiu7jn1c19eb5dsusa&st=angc2yv9&raw=1",
-  "https://www.dropbox.com/scl/fi/9p8beeborhuov6sb5wv35/0f920ab6-3463-4ade-bf73-b0e6820312f9-removebg-preview.png?rlkey=dpn4ceurxcra2mf4h7c370pf5&st=je30yulv&raw=1",
-  "https://www.dropbox.com/scl/fi/8tdm7p6z69upcxyk5tvir/bronxodoks.jpg?rlkey=uq71dtbr8n8o3dt1ix8o27u4d&st=itjd89h6&raw=1",
-  "https://www.dropbox.com/scl/fi/a79f7551urqnb59g8dmeh/7a9a3226-0772-47f6-96bd-2e71fe95d16f-removebg-preview.png?rlkey=pb1g2adx0xnnirc53x9cv13dv&st=xqr5ba68&raw=1",
-];
+const productImages = [csr1, csr2, csr3, csr4];
 
-const csrGalleryImages = [
-  "https://www.dropbox.com/scl/fi/f52tbqlnltaowcr1yt7p4/IMG_0585.PNG?rlkey=41ih6o0cdc3kzdoq97xo4irda&st=hx4na4k3&raw=1",
-  "https://www.dropbox.com/scl/fi/d613kld5vr7sti0wrh56d/IMG_0588.PNG?rlkey=vrizg4opuqpqt9r9cggr4rzj9&st=0fyn34gr&raw=1",
-  "https://www.dropbox.com/scl/fi/pwgijoap0dweqh1v2zxju/IMG_0589.PNG?rlkey=zxjmywxk53iszcyb01bsahj10&st=ssmryh7b&raw=1",
-  "https://www.dropbox.com/scl/fi/tukwoop13ot4pvte4qg3q/IMG_0590.PNG?rlkey=vtqi00d7lw0gd5fzdw6g6zrw3&st=icnnmr0h&raw=1",
-  "https://www.dropbox.com/scl/fi/hzj5x3clnbc4pc6wy8rnb/IMG_0591.PNG?rlkey=4e0j0tncstl8eugb5x2jao4nh&st=mud83t0j&raw=1",
-];
+const csrGalleryImages = [csr1, csr2, csr3, csr4];
 // ─── MAIN COMPONENT ───────────────────────────────────────────────────────────
 export default function INVPoland() {
   const { t } = useTranslation();

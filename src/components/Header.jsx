@@ -179,12 +179,12 @@ export default function Header() {
                 {t("header.csr")}
               </Link>
 
-              <Link
+              {/* <Link
                 to="/news"
                 className="nav-link px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 rounded-lg hover:bg-blue-50 transition-all"
               >
                 {t("header.news")}
-              </Link>
+              </Link> */}
 
               <Link
                 to="/career"
@@ -325,13 +325,13 @@ export default function Header() {
                   {t("header.csr")}
                 </Link>
 
-                <Link
+                {/* <Link
                   to="/news"
                   className="mobile-menu-item block px-4 py-4 bg-slate-50 hover:bg-blue-50 rounded-xl transition-all font-medium text-slate-700 hover:text-blue-600 border border-transparent hover:border-blue-200"
                   onClick={() => setMobileOpen(false)}
                 >
                   {t("header.news")}
-                </Link>
+                </Link> */}
 
                 <Link
                   to="/career"

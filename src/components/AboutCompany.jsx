@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-
+import AboutPng from "../assets/about.png"
 export default function AboutCompany() {
   const { t } = useTranslation();
 
@@ -47,7 +47,7 @@ export default function AboutCompany() {
           <div className="absolute -top-6 -left-6 w-full h-full border border-slate-200 rounded-2xl" />
 
           <img
-            src="https://www.dropbox.com/scl/fi/f52tbqlnltaowcr1yt7p4/IMG_0585.PNG?rlkey=41ih6o0cdc3kzdoq97xo4irda&st=hx4na4k3&raw=1"
+            src={AboutPng}
             alt="Office"
             className="relative rounded-2xl object-cover w-full h-full"
           />
