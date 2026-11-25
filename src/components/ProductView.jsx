@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Download, CheckCircle, AlertCircle, ArrowLeft } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { FileText, CheckCircle, AlertCircle, ArrowLeft, X } from "lucide-react";
 import Header from "./Header";
 import productsData from "../data/productsData";
 
@@ -13,12 +14,71 @@ const findProduct = (id) => {
   return null;
 };
 
+const getLocalizedValue = (value, language) => {
+  if (value == null) return "";
+  if (typeof value !== "object" || Array.isArray(value)) return value;
+  return value[language] ?? value.uz ?? value.ru ?? value.en ?? "";
+};
+
+const getProductValue = (item, field, language) => {
+  if (!item) return "";
+  const suffix = language.charAt(0).toUpperCase() + language.slice(1);
+  return getLocalizedValue(
+    item[`${field}${suffix}`] ??
+      item[field] ??
+      item[`${field}Ru`] ??
+      item[`${field}Uz`] ??
+      item[`${field}En`],
+    language
+  );
+};
+
+const getLocalizedList = (value, language) => {
+  const localizedValue = getLocalizedValue(value, language);
+  return Array.isArray(localizedValue) ? localizedValue : [];
+};
+
+const isPdfDocument = (fileUrl) => {
+  if (!fileUrl) return false;
+  const url = new URL(fileUrl);
+  return (
+    url.pathname.toLowerCase().endsWith(".pdf") ||
+    (url.hostname === "drive.google.com" && /\/file\/d\/[^/]+/.test(url.pathname))
+  );
+};
+
+const getPdfPreviewUrl = (fileUrl) => {
+  const url = new URL(fileUrl);
+  if (url.hostname === "drive.google.com") {
+    const fileId = url.pathname.match(/\/file\/d\/([^/]+)/)?.[1];
+    if (fileId) return `https://drive.google.com/file/d/${fileId}/preview`;
+  }
+  if (url.hostname === "www.dropbox.com") {
+    url.searchParams.delete("dl");
+    url.searchParams.set("raw", "1");
+  }
+  return url.toString();
+};
+
 const ProductView = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
   const [activeTab, setActiveTab] = useState("description");
+  const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
 
   const product = findProduct(id);
+
+  useEffect(() => {
+    if (!isPdfModalOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setIsPdfModalOpen(false);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isPdfModalOpen]);
 
   if (!product) {
     return (
@@ -46,8 +106,22 @@ const ProductView = () => {
     );
   }
 
-  const handleDownloadPDF = () => {
-    window.open(product.pdf, '_blank');
+  const language =
+    i18n.resolvedLanguage?.split("-")[0] ||
+    i18n.language?.split("-")[0] ||
+    "uz";
+  const productName = getProductValue(product, "name", language);
+  const productTagline = getProductValue(product, "tagline", language);
+  const productDescription =
+    getProductValue(product, "description", language) || productTagline;
+  const isPdf = isPdfDocument(product.pdf);
+  const handleOpenDocument = () => {
+    if (isPdf) {
+      setIsPdfModalOpen(true);
+      return;
+    }
+
+    window.open(product.pdf, "_blank");
   };
 
   const handleGoBack = () => {
@@ -79,7 +153,7 @@ const ProductView = () => {
                 <div className="bg-white rounded-3xl p-8 shadow-xl">
                   <img
                     src={product.image}
-                    alt={product.name}
+                    alt={productName}
                     loading="eager"
                     decoding="async"
                     width={700}
@@ -103,34 +177,38 @@ const ProductView = () => {
                 )}
 
                 <h1 className="text-5xl font-bold text-slate-900 mb-4">
-                  {product.name}
+                  {productName}
                 </h1>
 
                 <p className="text-xl text-slate-600 mb-6">
-                  {product.tagline}
+                  {productTagline}
                 </p>
 
                 {/* QUICK INFO */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   <div className="bg-white rounded-2xl p-4 border border-slate-200">
                     <div className="text-sm text-slate-500 mb-1">Hajm</div>
-                    <div className="text-lg font-semibold text-slate-900">{product.volume}</div>
+                    <div className="text-lg font-semibold text-slate-900">
+                      {getProductValue(product, "volume", language)}
+                    </div>
                   </div>
                   <div className="bg-white rounded-2xl p-4 border border-slate-200">
                     <div className="text-sm text-slate-500 mb-1">Shakl</div>
-                    <div className="text-lg font-semibold text-slate-900">{product.form}</div>
+                    <div className="text-lg font-semibold text-slate-900">
+                      {getProductValue(product, "form", language)}
+                    </div>
                   </div>
                 </div>
 
                 {/* ACTION BUTTONS */}
                 <div className="flex gap-4 mb-8">
                   <button
-                    onClick={handleDownloadPDF}
+                    onClick={handleOpenDocument}
                     className="flex-1 bg-blue-600 text-white px-8 py-4 rounded-full font-semibold 
                     hover:bg-blue-700 transition flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                   >
-                    <Download size={20} />
-                    Yo'riqnomani yuklab olish
+                    <FileText size={20} />
+                    Yo'riqnomani ko'rish
                   </button>
                 </div>
 
@@ -140,7 +218,7 @@ const ProductView = () => {
                     {product.features.map((feature, index) => (
                       <div key={index} className="flex items-center gap-2 text-sm text-slate-600">
                         <CheckCircle size={16} className="text-green-500" />
-                        {feature.text}
+                        {getProductValue(feature, "text", language)}
                       </div>
                     ))}
                   </div>
@@ -156,10 +234,10 @@ const ProductView = () => {
             <div className="max-w-7xl mx-auto px-6">
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                  Nima uchun {product.name}?
+                  Nima uchun {productName}?
                 </h2>
                 <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                  {product.taglineRu}
+                  {productTagline}
                 </p>
               </div>
 
@@ -172,10 +250,10 @@ const ProductView = () => {
                   >
                     <div className="text-4xl mb-4">{benefit.icon}</div>
                     <h3 className="text-lg font-bold text-slate-900 mb-2">
-                      {benefit.title}
+                      {getProductValue(benefit, "title", language)}
                     </h3>
                     <p className="text-sm text-slate-600">
-                      {benefit.description}
+                      {getProductValue(benefit, "description", language)}
                     </p>
                   </div>
                 ))}
@@ -216,15 +294,17 @@ const ProductView = () => {
               {activeTab === "description" && (
                 <div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-6">
-                    {product.name} haqida umumiy ma'lumot
+                    {productName} haqida umumiy ma'lumot
                   </h3>
                   <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                    {product.taglineRu}
+                    {productDescription}
                   </p>
                   <div className="grid md:grid-cols-2 gap-6 mt-8">
                     <div className="p-6 bg-blue-50 rounded-2xl">
                       <h4 className="font-bold text-slate-900 mb-3">Yaroqlilik muddati</h4>
-                      <p className="text-slate-700">{product.shelfLife}</p>
+                      <p className="text-slate-700">
+                        {getProductValue(product, "shelfLife", language)}
+                      </p>
                     </div>
                     <div className="p-6 bg-green-50 rounded-2xl">
                       <h4 className="font-bold text-slate-900 mb-3">Ishlab chiqaruvchi</h4>
@@ -255,7 +335,9 @@ const ProductView = () => {
                         <tbody>
                           {product.composition.map((item, index) => (
                             <tr key={index} className="border-t border-slate-200 hover:bg-slate-50">
-                              <td className="p-4 text-slate-700">{item.name}</td>
+                              <td className="p-4 text-slate-700">
+                                {getProductValue(item, "name", language)}
+                              </td>
                               <td className="p-4 font-semibold text-slate-900">{item.amount}</td>
                               <td className="p-4 text-slate-600">{item.per}</td>
                             </tr>
@@ -273,14 +355,17 @@ const ProductView = () => {
                           <div className="flex items-center gap-3 mb-4">
                             <span className="text-3xl">{ingredient.icon}</span>
                             <h4 className="text-xl font-bold text-slate-900">
-                              {ingredient.name}
+                              {getProductValue(ingredient, "name", language)}
                             </h4>
                           </div>
                           <ul className="space-y-2">
-                            {ingredient.benefits.map((benefit, idx) => (
+                            {getLocalizedList(
+                              getProductValue(ingredient, "benefits", language),
+                              language
+                            ).map((benefit, idx) => (
                               <li key={idx} className="flex items-start gap-2 text-slate-600">
                                 <CheckCircle size={16} className="text-green-500 mt-1 flex-shrink-0" />
-                                <span>{benefit}</span>
+                                <span>{getLocalizedValue(benefit, language)}</span>
                               </li>
                             ))}
                           </ul>
@@ -304,7 +389,9 @@ const ProductView = () => {
                         <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">1</div>
                         <h4 className="text-xl font-bold text-slate-900">Dozalash</h4>
                       </div>
-                      <p className="text-slate-700">{product.usage.dosage}</p>
+                      <p className="text-slate-700">
+                        {getProductValue(product.usage, "dosage", language)}
+                      </p>
                     </div>
 
                     <div className="p-6 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl">
@@ -312,7 +399,9 @@ const ProductView = () => {
                         <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl">2</div>
                         <h4 className="text-xl font-bold text-slate-900">Qabul qilish vaqti</h4>
                       </div>
-                      <p className="text-slate-700">{product.usage.timing}</p>
+                      <p className="text-slate-700">
+                        {getProductValue(product.usage, "timing", language)}
+                      </p>
                     </div>
 
                     <div className="p-6 bg-gradient-to-r from-purple-50 to-purple-100 rounded-2xl">
@@ -320,16 +409,20 @@ const ProductView = () => {
                         <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">3</div>
                         <h4 className="text-xl font-bold text-slate-900">Kurs davomiyligi</h4>
                       </div>
-                      <p className="text-slate-700">{product.usage.duration}</p>
+                      <p className="text-slate-700">
+                        {getProductValue(product.usage, "duration", language)}
+                      </p>
                     </div>
 
-                    {product.usage.instruction && (
+                    {getProductValue(product.usage, "instruction", language) && (
                       <div className="p-6 bg-gradient-to-r from-orange-50 to-orange-100 rounded-2xl border-2 border-orange-200">
                         <div className="flex items-start gap-3">
                           <AlertCircle className="text-orange-600 mt-1 flex-shrink-0" size={24} />
                           <div>
                             <h4 className="text-lg font-bold text-slate-900 mb-2">Muhim!</h4>
-                            <p className="text-slate-700">{product.usage.instruction}</p>
+                            <p className="text-slate-700">
+                              {getProductValue(product.usage, "instruction", language)}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -341,10 +434,12 @@ const ProductView = () => {
                     <div className="mt-8">
                       <h4 className="text-xl font-bold text-slate-900 mb-4">Saqlash sharoitlari</h4>
                       <div className="grid md:grid-cols-2 gap-4">
-                        {product.storage.map((item, index) => (
+                        {getLocalizedList(product.storage, language).map((item, index) => (
                           <div key={index} className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
                             <CheckCircle className="text-blue-600 flex-shrink-0" size={20} />
-                            <span className="text-slate-700">{item}</span>
+                            <span className="text-slate-700">
+                              {getLocalizedValue(item, language)}
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -354,7 +449,8 @@ const ProductView = () => {
               )}
 
               {/* CONTRAINDICATIONS TAB */}
-              {activeTab === "contraindications" && product.contraindications && (
+              {activeTab === "contraindications" &&
+                getLocalizedList(product.contraindications, language).length > 0 && (
                 <div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-6">
                     Qarshi ko'rsatmalar va ehtiyot choralari
@@ -365,10 +461,12 @@ const ProductView = () => {
                       Qarshi ko'rsatmalar
                     </h4>
                     <ul className="space-y-3">
-                      {product.contraindications.map((item, index) => (
+                      {getLocalizedList(product.contraindications, language).map((item, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <span className="text-red-600 font-bold mt-1">•</span>
-                          <span className="text-slate-700">{item}</span>
+                          <span className="text-slate-700">
+                            {getLocalizedValue(item, language)}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -387,19 +485,53 @@ const ProductView = () => {
               To'liq ma'lumot uchun yo'riqnomani yuklab oling
             </h2>
             <p className="text-blue-100 text-lg mb-8">
-              {product.name} haqida barcha ma'lumotlar, ko'rsatmalar va tavsiyalar
+              {productName} haqida barcha ma'lumotlar, ko'rsatmalar va tavsiyalar
             </p>
             <button
-              onClick={handleDownloadPDF}
+              onClick={handleOpenDocument}
               className="inline-flex items-center gap-3 bg-white text-blue-600 px-8 py-4 rounded-full 
               font-bold text-lg hover:bg-blue-50 transition shadow-xl hover:shadow-2xl"
             >
-              <Download size={24} />
-              PDF yo'riqnomani yuklab olish
+              <FileText size={24} />
+              PDF yo'riqnomani ko'rish
             </button>
           </div>
         </section>
       </div>
+      {isPdfModalOpen && isPdf && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-3 sm:p-6"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) setIsPdfModalOpen(false);
+          }}
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="product-pdf-title"
+            className="flex h-[90vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl"
+          >
+            <header className="flex items-center justify-between gap-4 border-b border-slate-200 px-4 py-3 sm:px-6">
+              <h2 id="product-pdf-title" className="font-semibold text-slate-900">
+                Yo'riqnoma: {productName}
+              </h2>
+              <button
+                type="button"
+                onClick={() => setIsPdfModalOpen(false)}
+                aria-label="Yopish"
+                className="rounded-full p-2 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
+              >
+                <X size={22} />
+              </button>
+            </header>
+            <iframe
+              src={getPdfPreviewUrl(product.pdf)}
+              title={`Yo'riqnoma: ${productName}`}
+              className="min-h-0 flex-1"
+            />
+          </section>
+        </div>
+      )}
     </>
   );
 };

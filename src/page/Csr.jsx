@@ -27,8 +27,11 @@ import csr1 from '../assets/csr1.jpg'
 import csr2 from '../assets/csr2.jpg'
 import csr3 from '../assets/csr3.jpg'
 import csr4 from '../assets/csr4.jpg'
-
-
+import csrabout1 from "../assets/csrabout1.jpg";
+import csrabout2 from "../assets/csrabout2.avif";
+import csrabout3 from "../assets/csrabout3.jpg";
+import csrabout4 from "../assets/csrabout4.jpeg";
+import csrabout5 from "../assets/csrabout5.png";
 // ─── SVG IMAGES ───────────────────────────────────────────────────────────────
 const PillsImage = () => (
   <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
@@ -186,9 +189,7 @@ const productStyles = [
     btnClass: "text-cyan-500 border-cyan-400 hover:bg-cyan-500 hover:text-white",
   },
 ];
-
-const productImages = [csr1, csr2, csr3, csr4];
-
+const productImages = [csrabout1, csrabout2, csrabout3, csrabout4, csrabout5];
 const csrGalleryImages = [csr1, csr2, csr3, csr4];
 // ─── MAIN COMPONENT ───────────────────────────────────────────────────────────
 export default function INVPoland() {
@@ -225,7 +226,7 @@ export default function INVPoland() {
           </div>
           {/* Illustration */}
           <div className="flex-1">
-            <img src="https://www.dropbox.com/scl/fi/ypfb2bvefkfwmsrl4ij37/2026-04-25-14.03.06.png?rlkey=wv6gdayp2irl045s97l0lqjej&raw=1" />
+            <img src={csrGalleryImages[0]} alt="CSR Illustration" />
           </div>
         </div>
       </section>
@@ -234,15 +235,7 @@ export default function INVPoland() {
       <section className="bg-white py-20 px-6">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-14">
           <div className="flex-1 min-w-[280px] rounded-3xl overflow-hidden shadow-2xl shadow-blue-100">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full"
-            >
-              <source src="https://dl.dropboxusercontent.com/scl/fi/q1pkzjlfzsdt0o65kiddb/about.mp4?rlkey=t33v931nhkbxxjvt0magax42b" type="video/mp4" />
-            </video>
+            <img src={csrGalleryImages[1]} alt="Who We Are" className="w-full h-full object-cover" />
           </div>
           <div className="flex-1">
             <span className="inline-block bg-blue-50 text-blue-600 text-[11px] font-extrabold tracking-[2px] uppercase px-4 py-1.5 rounded-full mb-4">
@@ -271,8 +264,7 @@ export default function INVPoland() {
 
       {/* ── OUR OFFER ── */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-950 to-cyan-950 py-20 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-14">
-          <div className="flex-1">
+        <div className="flex flex-col  lg:flex-col items-center ">
             <span className="inline-block bg-blue-500/20 text-blue-300 text-[11px] font-extrabold tracking-[2px] uppercase px-4 py-1.5 rounded-full mb-4">
               {t("invpoland.offer.badge")}
             </span>
@@ -282,26 +274,12 @@ export default function INVPoland() {
             <p className="text-sky-400 text-2xl italic font-semibold mb-6">
               {t("invpoland.offer.subtitle")}
             </p>
-            <p className="text-slate-400 leading-relaxed text-[15px] mb-8 max-w-lg">
+            <p className="text-slate-400 leading-relaxed text-[15px] mb-8  text-center">
               {t("invpoland.offer.text")}
             </p>
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-sm px-8 py-4 rounded-full shadow-lg shadow-blue-900/50 hover:shadow-xl hover:shadow-blue-800/60 hover:-translate-y-0.5 transition-all duration-300">
               {t("invpoland.offer.cta")} <ChevronRight size={16} />
             </button>
-          </div>
-          <div className="flex-1 min-w-[260px] rounded-3xl overflow-hidden shadow-2xl shadow-black/40">
-            <div className="flex-1 min-w-[280px] rounded-3xl overflow-hidden shadow-2xl shadow-blue-100">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full"
-              >
-                <source src="https://www.dropbox.com/scl/fi/fuw1pfcqzde8sc8luz6yd/IMG_5868.MOV?rlkey=n1nak3ia23zitdgvdzwimh3cl&st=5uc331il&raw=1" />
-              </video>
-            </div>
-          </div>
         </div>
       </section>
 
